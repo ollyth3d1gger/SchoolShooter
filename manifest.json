@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Mail Security Filter",
+  "description": "Mail Security Filter",
+  "version": "1.3",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": ["lib/jquery.min.js" ,"mail.js"],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+  "permissions": [ "http://*/*", "https://*/*" ]
+}
